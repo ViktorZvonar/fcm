@@ -1,0 +1,15 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+}
+
+.find {
+  width: 150px;
+  margin-top: 20px;
+
+  outline: none;
+}
+
+.find:hover {
+  box-shadow: 3px 3px 3px 3px blue;
+}

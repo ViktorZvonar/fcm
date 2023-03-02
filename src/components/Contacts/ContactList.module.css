@@ -1,0 +1,27 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  width: 400px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  width: 50px;
+  height: 20px;
+  border-radius: 5px;
+
+  border: solid 1px;
+}
+
+.btn:hover {
+  background: lightskyblue;
+  border: solid 1px dodgerblue;
+
+  cursor: pointer;
+}

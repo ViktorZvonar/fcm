@@ -1,0 +1,37 @@
+.form {
+  width: 300px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+}
+
+.label {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  margin-top: 20px;
+
+  outline: none;
+}
+
+.input:hover {
+  box-shadow: 3px 3px 3px 3px blue;
+}
+
+.btn {
+  width: 170px;
+  border-radius: 5px;
+
+  border: solid 1px;
+}
+
+.btn:hover {
+  background: lightskyblue;
+  border: solid 1px dodgerblue;
+
+  cursor: pointer;
+}
