@@ -1,11 +1,10 @@
 import { useState } from 'react';
 
 import PropTypes from 'prop-types';
-import css from './RegisterForm.module.css';
+import css from './LoginForm.module.css';
 
-const RegisterForm = ({ onSubmit }) => {
+const LoginForm = ({ onSubmit }) => {
   const initialState = {
-    name: '',
     email: '',
     password: '',
   };
@@ -27,18 +26,6 @@ const RegisterForm = ({ onSubmit }) => {
 
   return (
     <form className={css.form} onSubmit={handleSubmit}>
-      <label className={css.label} htmlFor="">
-        Name
-        <input
-          className={css.input}
-          type="text"
-          name="name"
-          value={state.name}
-          onChange={handleChange}
-          required
-          autoComplete="name"
-        />
-      </label>
       <label className={css.label} htmlFor="">
         Email
         <input
@@ -64,14 +51,14 @@ const RegisterForm = ({ onSubmit }) => {
       </label>
 
       <button className={css.btn} type="submit">
-        Register
+        Log in
       </button>
     </form>
   );
 };
 
-export default RegisterForm;
+export default LoginForm;
 
-RegisterForm.propTypes = {
+LoginForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
 };
