@@ -36,7 +36,6 @@ const RegisterForm = ({ onSubmit }) => {
           value={state.name}
           onChange={handleChange}
           required
-          autoComplete="name"
         />
       </label>
       <label className={css.label} htmlFor="">
@@ -58,7 +57,6 @@ const RegisterForm = ({ onSubmit }) => {
           name="password"
           value={state.password}
           onChange={handleChange}
-          autoComplete="true"
           required
         />
       </label>

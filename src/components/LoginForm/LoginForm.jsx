@@ -45,7 +45,6 @@ const LoginForm = ({ onSubmit }) => {
           name="password"
           value={state.password}
           onChange={handleChange}
-          autoComplete="true"
           required
         />
       </label>

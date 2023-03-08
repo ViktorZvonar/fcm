@@ -1,6 +1,4 @@
-// export const getContacts = store => store.contacts;
-
-export const getFilteredContacts = ({ contacts, filter }) => {
+export const selectFilteredContacts = ({ contacts, filter }) => {
   if (!filter) {
     return contacts.items;
   }
@@ -18,4 +16,8 @@ export const getFilteredContacts = ({ contacts, filter }) => {
   return result;
 };
 
-export const getFilter = ({ filter }) => filter;
+export const selectFilter = ({ filter }) => filter;
+
+export const selectAuthError = ({ auth }) => auth.error || [];
+export const selectIsAuth = ({ auth }) => auth.isLogin;
+export const selectUser = ({ auth }) => auth.user;

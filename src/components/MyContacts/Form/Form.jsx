@@ -13,10 +13,10 @@ import css from './Form.module.css';
 
 import { useSelector, useDispatch } from 'react-redux';
 
-import { getFilteredContacts } from 'redux/selectors';
+import { selectFilteredContacts } from 'redux/selectors';
 
 const Form = () => {
-  const contacts = useSelector(getFilteredContacts);
+  const contacts = useSelector(selectFilteredContacts);
   const dispatch = useDispatch();
 
   useEffect(() => {

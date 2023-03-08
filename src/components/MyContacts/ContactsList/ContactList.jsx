@@ -4,10 +4,10 @@ import { fetchDeleteContact } from 'redux/contacts/contactsOperations';
 
 import { useSelector, useDispatch } from 'react-redux';
 
-import { getFilteredContacts } from 'redux/selectors';
+import { selectFilteredContacts } from 'redux/selectors';
 
 const ContactList = () => {
-  const contacts = useSelector(getFilteredContacts);
+  const contacts = useSelector(selectFilteredContacts);
 
   const dispatch = useDispatch();
 

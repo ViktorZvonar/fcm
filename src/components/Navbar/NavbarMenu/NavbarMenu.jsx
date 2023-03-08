@@ -10,11 +10,6 @@ const NavbarMenu = () => {
   return (
     <ul className={css.menu}>
       <li>
-        <NavLink className={getClassName} to="/">
-          Home
-        </NavLink>
-      </li>
-      <li>
         <NavLink className={getClassName} to="/contacts">
           Contacts
         </NavLink>
