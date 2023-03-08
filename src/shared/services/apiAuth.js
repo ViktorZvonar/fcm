@@ -13,6 +13,7 @@ const setToken = token => {
 
 export const signUp = async data => {
   const { data: result } = await authInstance.post('/users/signup', data);
+  setToken(result.token);
   return result;
 };
 

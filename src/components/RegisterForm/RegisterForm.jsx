@@ -21,8 +21,7 @@ const RegisterForm = ({ onSubmit }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    onSubmit(state);
-    setState({ ...initialState });
+    onSubmit({ ...state });
   };
 
   return (

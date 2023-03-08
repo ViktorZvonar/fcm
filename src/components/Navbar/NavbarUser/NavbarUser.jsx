@@ -5,7 +5,7 @@ import { logOutOperation } from 'redux/auth/authOperations';
 import { selectUser } from 'redux/selectors';
 
 const NavbarUser = () => {
-  const { name } = useSelector(selectUser);
+  const { email } = useSelector(selectUser);
   const dispatch = useDispatch();
 
   const onLogout = () => {
@@ -14,7 +14,7 @@ const NavbarUser = () => {
 
   return (
     <div>
-      <span>{name}</span>
+      <p>{email}</p>
       <button onClick={onLogout} type="button">
         Log out
       </button>
