@@ -1,22 +1,15 @@
-import css from './Navbar.module.css';
-
 import { useSelector } from 'react-redux';
+import { Header } from './NavBar.styled';
 
 import { selectIsAuth } from 'redux/selectors';
 
-import NavbarMenu from './NavbarMenu/NavbarMenu';
-import NavBarAuth from './NavbarAuth/NavbarAuth';
+import NavBarMenu from './NavbarMenu/NavbarMenu';
 import NavbarUser from './NavbarUser/NavbarUser';
 
 const Navbar = () => {
   const isLogin = useSelector(selectIsAuth);
 
-  return (
-    <div className={css.wrapper}>
-      {isLogin && <NavbarMenu />}
-      {isLogin ? <NavbarUser /> : <NavBarAuth />}
-    </div>
-  );
+  return <Header>{isLogin ? <NavbarUser /> : <NavBarMenu />}</Header>;
 };
 
 export default Navbar;

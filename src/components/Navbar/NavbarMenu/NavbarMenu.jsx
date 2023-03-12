@@ -1,19 +1,14 @@
-import { NavLink } from 'react-router-dom';
-import css from './NavbarMenu.module.css';
+import { Link } from './NavbarMenu.styled';
+import { Box } from '@mui/material';
 
-const getClassName = ({ isActive }) => {
-  const className = isActive ? `${css.link} ${css.active}` : css.link;
-  return className;
-};
-
-const NavbarMenu = () => {
+const NavBarMenu = () => {
   return (
-    <ul className={css.menu}>
-      <li>
-        <NavLink className={getClassName} to="/contacts"></NavLink>
-      </li>
-    </ul>
+    <Box display="flex" flexdirection="row" gap="100px">
+      <Link to="/">Home</Link>
+      <Link to="/register">Register</Link>
+      <Link to="/login">Log in</Link>
+    </Box>
   );
 };
 
-export default NavbarMenu;
+export default NavBarMenu;

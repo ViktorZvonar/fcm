@@ -1,4 +1,4 @@
-import css from './Filter.module.css';
+import { TextField } from '@mui/material';
 
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -13,16 +13,18 @@ const Filter = () => {
   };
 
   return (
-    <label className={css.filter}>
-      Find contacts by name
-      <input
-        className={css.find}
-        onChange={onSetFilter}
-        type="text"
-        name="filter"
-        filter={filter}
-      />
-    </label>
+    <TextField
+      sx={{
+        marginBottom: '40px',
+        width: '500px',
+      }}
+      name="filter"
+      type="text"
+      label="Find a specified contact"
+      filter={filter}
+      onChange={onSetFilter}
+      helperText="Start typing a name or a number"
+    />
   );
 };
 

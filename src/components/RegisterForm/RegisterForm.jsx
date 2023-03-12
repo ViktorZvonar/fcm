@@ -1,7 +1,11 @@
 import { useState } from 'react';
 
 import PropTypes from 'prop-types';
-import css from './RegisterForm.module.css';
+
+import { Button, TextField, InputAdornment, IconButton } from '@mui/material';
+import { VisibilityOff, Visibility } from '@mui/icons-material';
+
+import { Form } from '../../shared/Form.styled';
 
 const RegisterForm = ({ onSubmit }) => {
   const initialState = {
@@ -24,46 +28,86 @@ const RegisterForm = ({ onSubmit }) => {
     onSubmit({ ...state });
   };
 
-  return (
-    <form className={css.form} onSubmit={handleSubmit}>
-      <label className={css.label} htmlFor="">
-        Name
-        <input
-          className={css.input}
-          type="text"
-          name="name"
-          value={state.name}
-          onChange={handleChange}
-          required
-        />
-      </label>
-      <label className={css.label} htmlFor="">
-        Email
-        <input
-          className={css.input}
-          type="email"
-          name="email"
-          value={state.email}
-          onChange={handleChange}
-          required
-        />
-      </label>
-      <label className={css.label} htmlFor="">
-        Password
-        <input
-          className={css.input}
-          type="password"
-          name="password"
-          value={state.password}
-          onChange={handleChange}
-          required
-        />
-      </label>
+  const [eye, setEye] = useState(false);
+  const [isType, setIsType] = useState(true);
+  const type = isType ? 'password' : 'text';
 
-      <button className={css.btn} type="submit">
+  const handleMouseUpPassword = e => {
+    e.preventDefault();
+    setIsType(true);
+    setEye(false);
+  };
+
+  const handleMouseDownPassword = e => {
+    e.preventDefault();
+    setIsType(false);
+    setEye(true);
+  };
+
+  return (
+    <Form
+      style={{
+        marginLeft: 'auto',
+        marginRight: 'auto',
+      }}
+      onSubmit={handleSubmit}
+    >
+      <TextField
+        sx={{ marginBottom: '40px' }}
+        name="name"
+        type="text"
+        label="Name"
+        value={state.name}
+        onChange={handleChange}
+        required
+        helperText="Provide your name"
+      />
+
+      <TextField
+        sx={{ marginBottom: '40px' }}
+        name="email"
+        type="email"
+        label="Email"
+        value={state.email}
+        onChange={handleChange}
+        required
+        helperText="Provide valid email here"
+      />
+
+      <TextField
+        sx={{ marginBottom: '40px' }}
+        name="password"
+        type={type}
+        label="Password"
+        value={state.password}
+        onChange={handleChange}
+        required
+        helperText="Password must be numbers AND digits"
+        InputProps={{
+          endAdornment: (
+            <InputAdornment position="end">
+              <IconButton
+                onMouseDown={handleMouseDownPassword}
+                onMouseUp={handleMouseUpPassword}
+              >
+                {eye ? <VisibilityOff /> : <Visibility />}
+              </IconButton>
+            </InputAdornment>
+          ),
+        }}
+      />
+      <Button
+        type="submit"
+        variant="contained"
+        sx={{
+          marginRight: 'auto',
+          marginLeft: 'auto',
+          width: '100px',
+        }}
+      >
         Register
-      </button>
-    </form>
+      </Button>
+    </Form>
   );
 };
 

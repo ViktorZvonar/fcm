@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import { Button, TextField } from '@mui/material';
+
 import { useEffect } from 'react';
 
 import {
@@ -9,13 +11,13 @@ import {
 
 import { nanoid } from 'nanoid';
 
-import css from './Form.module.css';
+import { Form } from 'shared/Form.styled';
 
 import { useSelector, useDispatch } from 'react-redux';
 
 import { selectFilteredContacts } from 'redux/selectors';
 
-const Form = () => {
+const ContactForm = () => {
   const contacts = useSelector(selectFilteredContacts);
   const dispatch = useDispatch();
 
@@ -58,41 +60,46 @@ const Form = () => {
   };
 
   return (
-    <form className={css.form} onSubmit={handleSubmit}>
-      <label className={css.label} htmlFor={nameInputId}>
-        Name
-        <input
-          className={css.input}
-          type="text"
-          name="name"
-          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-          title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-          value={state.name}
-          id={nameInputId}
-          onChange={handleChange}
-          required
-        />
-      </label>
-      <label className={css.label} htmlFor={nameInputId}>
-        Number
-        <input
-          className={css.input}
-          type="tel"
-          name="number"
-          pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-          title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-          value={state.number}
-          id={phoneInputId}
-          onChange={handleChange}
-          required
-        />
-      </label>
+    <Form onSubmit={handleSubmit}>
+      <TextField
+        sx={{ marginBottom: '40px' }}
+        name="name"
+        type="text"
+        label="Name"
+        value={state.name}
+        id={nameInputId}
+        onChange={handleChange}
+        required
+        helperText="Provide contact's name"
+      />
 
-      <button className={css.btn} type="submit">
+      <TextField
+        sx={{ marginBottom: '40px' }}
+        name="number"
+        type="tel"
+        label="Number"
+        value={state.number}
+        id={phoneInputId}
+        onChange={handleChange}
+        required
+        helperText="Phone number can cantain - or / and can start with +"
+      />
+
+      <Button
+        type="submit"
+        variant="contained"
+        size="small"
+        color="secondary"
+        sx={{
+          marginRight: 'auto',
+
+          width: '200px',
+        }}
+      >
         Add contact
-      </button>
-    </form>
+      </Button>
+    </Form>
   );
 };
 
-export default Form;
+export default ContactForm;

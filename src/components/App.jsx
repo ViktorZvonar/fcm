@@ -6,16 +6,18 @@ import UserRoutes from './UserRoutes';
 
 import { currentOperation } from 'redux/auth/authOperations';
 
+import { Box } from '@mui/material';
+
 const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(currentOperation());
   }, [dispatch]);
   return (
-    <div>
+    <Box>
       <Navbar />
       <UserRoutes />
-    </div>
+    </Box>
   );
 };
 
