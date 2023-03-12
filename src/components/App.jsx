@@ -13,6 +13,7 @@ const App = () => {
   useEffect(() => {
     dispatch(currentOperation());
   }, [dispatch]);
+
   return (
     <Box>
       <Navbar />
