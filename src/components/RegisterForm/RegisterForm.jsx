@@ -82,7 +82,7 @@ const RegisterForm = ({ onSubmit }) => {
         value={state.password}
         onChange={handleChange}
         required
-        helperText="Password must be numbers AND digits"
+        helperText="Password must be letters AND digits"
         InputProps={{
           endAdornment: (
             <InputAdornment position="end">
