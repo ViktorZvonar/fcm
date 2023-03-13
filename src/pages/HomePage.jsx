@@ -6,7 +6,7 @@ const HomePage = () => {
   return (
     <Box display="flex" flexDirection="column" alignItems="center">
       <Box as="h1" textTransform="uppercase" color="orange" paddingTop="60px">
-        Welcome to your personal contact manager
+        Welcome to your personal contacts manager
       </Box>
 
       <ContactPhoneOutlinedIcon
