@@ -14,6 +14,7 @@ export const signUpOperation = createAsyncThunk(
         status,
         message: data.message,
       };
+      console.log(error);
       return rejectWithValue(error);
     }
   }
@@ -31,6 +32,7 @@ export const logInOperation = createAsyncThunk(
         status,
         message: data.message,
       };
+      console.log(error);
       return rejectWithValue(error);
     }
   }

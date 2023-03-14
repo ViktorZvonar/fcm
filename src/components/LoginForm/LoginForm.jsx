@@ -1,11 +1,5 @@
 import { useState } from 'react';
-import {
-  Button,
-  TextField,
-  InputAdornment,
-  IconButton,
-  Stack,
-} from '@mui/material';
+import { Button, TextField, InputAdornment, IconButton } from '@mui/material';
 import { VisibilityOff, Visibility } from '@mui/icons-material';
 
 import { Form } from 'shared/Form.styled';
@@ -29,8 +23,7 @@ const LoginForm = ({ onSubmit }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    onSubmit(state);
-    setState({ ...initialState });
+    onSubmit({ ...state });
   };
 
   const [eye, setEye] = useState(false);
@@ -50,66 +43,59 @@ const LoginForm = ({ onSubmit }) => {
   };
 
   return (
-    <Stack
-      sx={{
-        marginRight: 'auto',
+    <Form
+      style={{
         marginLeft: 'auto',
+        marginRight: 'auto',
       }}
+      onSubmit={handleSubmit}
     >
-      <Form
-        style={{
-          marginLeft: 'auto',
-          marginRight: 'auto',
+      <TextField
+        sx={{ marginBottom: '40px' }}
+        name="email"
+        type="email"
+        label="Email"
+        value={state.email}
+        onChange={handleChange}
+        required
+        helperText="Provide the valid email here - example@example.com"
+      />
+
+      <TextField
+        sx={{ marginBottom: '40px' }}
+        name="password"
+        type={type}
+        label="Password"
+        value={state.password}
+        onChange={handleChange}
+        required
+        helperText="The password must be minimum 7 letters AND digits"
+        InputProps={{
+          endAdornment: (
+            <InputAdornment position="end">
+              <IconButton
+                onMouseDown={handleMouseDownPassword}
+                onMouseUp={handleMouseUpPassword}
+              >
+                {eye ? <VisibilityOff /> : <Visibility />}
+              </IconButton>
+            </InputAdornment>
+          ),
         }}
-        onSubmit={handleSubmit}
+      />
+
+      <Button
+        type="submit"
+        variant="contained"
+        sx={{
+          marginRight: 'auto',
+          marginLeft: 'auto',
+          width: '100px',
+        }}
       >
-        <TextField
-          sx={{ marginBottom: '40px' }}
-          name="email"
-          type="email"
-          label="Email"
-          value={state.email}
-          onChange={handleChange}
-          required
-          helperText="Provide valid email here"
-        />
-
-        <TextField
-          sx={{ marginBottom: '40px' }}
-          name="password"
-          type={type}
-          label="Password"
-          value={state.password}
-          onChange={handleChange}
-          required
-          helperText="Password must be letters AND digits"
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="end">
-                <IconButton
-                  onMouseDown={handleMouseDownPassword}
-                  onMouseUp={handleMouseUpPassword}
-                >
-                  {eye ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
-              </InputAdornment>
-            ),
-          }}
-        />
-
-        <Button
-          type="submit"
-          variant="contained"
-          sx={{
-            marginRight: 'auto',
-            marginLeft: 'auto',
-            width: '100px',
-          }}
-        >
-          Log in
-        </Button>
-      </Form>
-    </Stack>
+        Log in
+      </Button>
+    </Form>
   );
 };
 

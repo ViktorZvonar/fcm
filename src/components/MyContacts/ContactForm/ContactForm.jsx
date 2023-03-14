@@ -1,3 +1,5 @@
+import Notiflix from 'notiflix';
+
 import { useState } from 'react';
 
 import { Button, TextField } from '@mui/material';
@@ -33,7 +35,7 @@ const ContactForm = () => {
         contact.name.toLowerCase() === normalizedName ||
         contact.number === payload.number
     )
-      ? alert(`This contact is already in your book.`)
+      ? Notiflix.Notify.warning(`This contact is already in your book.`)
       : dispatch(fetchAddContact(payload)) && setState({ ...initialState });
   };
 

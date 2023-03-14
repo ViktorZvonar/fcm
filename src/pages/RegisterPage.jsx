@@ -1,3 +1,5 @@
+import Notiflix from 'notiflix';
+
 import RegisterForm from 'components/RegisterForm/RegisterForm';
 
 import { useSelector, useDispatch } from 'react-redux';
@@ -10,10 +12,14 @@ import { Box, Typography } from '@mui/material';
 
 const RegisterPage = () => {
   const dispatch = useDispatch();
-  const { status, message } = useSelector(selectAuthError);
+  const { status } = useSelector(selectAuthError);
 
   const onRegister = data => {
-    dispatch(signUpOperation(data));
+    status
+      ? Notiflix.Notify.failure(
+          `User validation failed. Please follow the instructitons under the input fields`
+        )
+      : dispatch(signUpOperation(data));
   };
 
   return (
@@ -31,19 +37,6 @@ const RegisterPage = () => {
         Please provide data to register
       </Typography>
       <RegisterForm onSubmit={onRegister} />
-      {status && (
-        <Typography
-          sx={{
-            textAlign: 'center',
-            marginTop: '20px',
-            textTransform: 'uppercase',
-            color: 'red',
-          }}
-          component="h3"
-        >
-          {message}
-        </Typography>
-      )}
     </Box>
   );
 };

@@ -71,7 +71,7 @@ const RegisterForm = ({ onSubmit }) => {
         value={state.email}
         onChange={handleChange}
         required
-        helperText="Provide valid email here"
+        helperText="Provide the valid email here - example@example.com"
       />
 
       <TextField
@@ -82,7 +82,7 @@ const RegisterForm = ({ onSubmit }) => {
         value={state.password}
         onChange={handleChange}
         required
-        helperText="Password must be letters AND digits"
+        helperText="The password must be minimum 7 letters AND digits"
         InputProps={{
           endAdornment: (
             <InputAdornment position="end">

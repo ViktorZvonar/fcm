@@ -1,3 +1,5 @@
+import Notiflix from 'notiflix';
+
 import LoginForm from './../components/LoginForm/LoginForm';
 
 import { useSelector, useDispatch } from 'react-redux';
@@ -10,10 +12,14 @@ import { Box, Typography } from '@mui/material';
 
 const LoginPage = () => {
   const dispatch = useDispatch();
-  const { status, message } = useSelector(selectAuthError);
+  const { status } = useSelector(selectAuthError);
 
   const onLogin = data => {
-    dispatch(logInOperation(data));
+    status
+      ? Notiflix.Notify.failure(
+          `User validation failed. Please follow the instructitons under the input fields`
+        )
+      : dispatch(logInOperation(data));
   };
 
   return (
@@ -31,19 +37,6 @@ const LoginPage = () => {
         Please fill in the form to log in
       </Typography>
       <LoginForm onSubmit={onLogin} />
-      {status && (
-        <Typography
-          sx={{
-            textAlign: 'center',
-            marginTop: '20px',
-            textTransform: 'uppercase',
-            color: 'red',
-          }}
-          component="h3"
-        >
-          {message}
-        </Typography>
-      )}
     </Box>
   );
 };

@@ -21,7 +21,7 @@ export const fetchAddContact = createAsyncThunk(
       const result = await api.addContact(data);
       return result;
     } catch (error) {
-      return rejectWithValue(error);
+      return rejectWithValue(error.message);
     }
   }
 );
