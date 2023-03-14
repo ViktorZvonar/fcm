@@ -80,6 +80,7 @@ const authSlice = createSlice({
       store.error = null;
     },
     [nullStatus.fulfilled]: store => {
+      console.log(store);
       store.error = null;
     },
     [nullStatus.rejected]: store => {

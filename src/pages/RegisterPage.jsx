@@ -22,9 +22,9 @@ const RegisterPage = () => {
       Notiflix.Notify.warning(
         `Please follow the instructitons under the input fields`
       );
-      nullStatus();
+      dispatch(nullStatus());
     }
-  }, [status, message]);
+  }, [status, message, dispatch]);
 
   const onRegister = data => {
     dispatch(signUpOperation(data));

@@ -21,9 +21,9 @@ const LoginPage = () => {
       Notiflix.Notify.warning(
         `Please follow the instructitons under the input fields`
       );
-      nullStatus();
+      dispatch(nullStatus());
     }
-  }, [status]);
+  }, [status, dispatch]);
 
   const onLogin = data => {
     dispatch(logInOperation(data));
