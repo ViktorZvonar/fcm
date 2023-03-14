@@ -71,6 +71,7 @@ const ContactForm = () => {
         onChange={handleChange}
         required
         helperText="Provide contact's name"
+        autoComplete="current"
       />
 
       <TextField
@@ -83,6 +84,7 @@ const ContactForm = () => {
         onChange={handleChange}
         required
         helperText="Phone number can contain - or / and can start with +"
+        autoComplete="current"
       />
 
       <Button

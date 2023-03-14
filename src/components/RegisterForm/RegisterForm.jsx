@@ -61,6 +61,7 @@ const RegisterForm = ({ onSubmit }) => {
         onChange={handleChange}
         required
         helperText="Provide your name"
+        autoComplete="current"
       />
 
       <TextField
@@ -72,6 +73,7 @@ const RegisterForm = ({ onSubmit }) => {
         onChange={handleChange}
         required
         helperText="Provide the valid email here - example@example.com"
+        autoComplete="current"
       />
 
       <TextField
@@ -83,6 +85,7 @@ const RegisterForm = ({ onSubmit }) => {
         onChange={handleChange}
         required
         helperText="The password must be minimum 7 letters AND digits"
+        autoComplete="current"
         InputProps={{
           endAdornment: (
             <InputAdornment position="end">
