@@ -24,7 +24,6 @@ const RegisterPage = () => {
       );
       nullStatus();
     }
-    return;
   }, [status, message]);
 
   const onRegister = data => {

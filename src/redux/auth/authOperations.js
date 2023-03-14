@@ -77,9 +77,9 @@ export const currentOperation = createAsyncThunk(
 
 export const nullStatus = createAsyncThunk(
   'auth/noError',
-  async (data, { rejectWithValue }) => {
+  async (_, { rejectWithValue }) => {
     try {
-      const result = await api.signUp(data);
+      const result = await api.signUp();
       return result;
     } catch ({ response }) {
       response.status = null;
