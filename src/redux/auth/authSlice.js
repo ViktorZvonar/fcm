@@ -5,6 +5,7 @@ import {
   logInOperation,
   logOutOperation,
   currentOperation,
+  nullStatus,
 } from './authOperations';
 
 const initialState = {
@@ -74,6 +75,15 @@ const authSlice = createSlice({
       store.loading = false;
       store.token = '';
       store.error = payload;
+    },
+    [nullStatus.pending]: store => {
+      store.error = null;
+    },
+    [nullStatus.fulfilled]: store => {
+      store.error = null;
+    },
+    [nullStatus.rejected]: store => {
+      store.error = null;
     },
   },
 });

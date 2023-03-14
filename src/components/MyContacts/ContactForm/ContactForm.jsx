@@ -1,10 +1,8 @@
 import Notiflix from 'notiflix';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { Button, TextField } from '@mui/material';
-
-import { useEffect } from 'react';
 
 import {
   fetchAllContacts,

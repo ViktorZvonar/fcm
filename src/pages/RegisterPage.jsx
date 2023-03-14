@@ -6,20 +6,29 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { selectAuthError } from 'redux/selectors';
 
-import { signUpOperation } from 'redux/auth/authOperations';
+import { signUpOperation, nullStatus } from 'redux/auth/authOperations';
 
 import { Box, Typography } from '@mui/material';
 
+import { useEffect } from 'react';
+
 const RegisterPage = () => {
   const dispatch = useDispatch();
-  const { status } = useSelector(selectAuthError);
+  const { status, message } = useSelector(selectAuthError);
+
+  useEffect(() => {
+    if (status) {
+      Notiflix.Notify.failure(message);
+      Notiflix.Notify.warning(
+        `Please follow the instructitons under the input fields`
+      );
+      nullStatus();
+    }
+    return;
+  }, [status, message]);
 
   const onRegister = data => {
-    status
-      ? Notiflix.Notify.failure(
-          `User validation failed. Please follow the instructitons under the input fields`
-        )
-      : dispatch(signUpOperation(data));
+    dispatch(signUpOperation(data));
   };
 
   return (

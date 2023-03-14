@@ -4,7 +4,9 @@ import LoginForm from './../components/LoginForm/LoginForm';
 
 import { useSelector, useDispatch } from 'react-redux';
 
-import { logInOperation } from 'redux/auth/authOperations';
+import { useEffect } from 'react';
+
+import { logInOperation, nullStatus } from 'redux/auth/authOperations';
 
 import { selectAuthError } from 'redux/selectors';
 
@@ -14,12 +16,17 @@ const LoginPage = () => {
   const dispatch = useDispatch();
   const { status } = useSelector(selectAuthError);
 
+  useEffect(() => {
+    if (status) {
+      Notiflix.Notify.warning(
+        `Please follow the instructitons under the input fields`
+      );
+      nullStatus();
+    }
+  }, [status]);
+
   const onLogin = data => {
-    status
-      ? Notiflix.Notify.failure(
-          `User validation failed. Please follow the instructitons under the input fields`
-        )
-      : dispatch(logInOperation(data));
+    dispatch(logInOperation(data));
   };
 
   return (

@@ -12,9 +12,8 @@ export const signUpOperation = createAsyncThunk(
       const { status, data } = response;
       const error = {
         status,
-        message: data.message,
+        message: data._message,
       };
-      console.log(error);
       return rejectWithValue(error);
     }
   }
@@ -32,7 +31,6 @@ export const logInOperation = createAsyncThunk(
         status,
         message: data.message,
       };
-      console.log(error);
       return rejectWithValue(error);
     }
   }
@@ -73,6 +71,19 @@ export const currentOperation = createAsyncThunk(
         message: data.message,
       };
       return rejectWithValue(error);
+    }
+  }
+);
+
+export const nullStatus = createAsyncThunk(
+  'auth/noError',
+  async (data, { rejectWithValue }) => {
+    try {
+      const result = await api.signUp(data);
+      return result;
+    } catch ({ response }) {
+      response.status = null;
+      return rejectWithValue(response.status);
     }
   }
 );
