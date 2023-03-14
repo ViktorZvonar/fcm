@@ -18,7 +18,7 @@ const RegisterPage = () => {
 
   useEffect(() => {
     if (status) {
-      Notiflix.Notify.failure(message);
+      Notiflix.Notify.info(message);
       Notiflix.Notify.warning(
         `Please follow the instructitons under the input fields`
       );

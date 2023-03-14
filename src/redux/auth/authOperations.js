@@ -80,7 +80,6 @@ export const nullStatus = createAsyncThunk(
   async (data, { rejectWithValue }) => {
     try {
       const result = await api.signUp(data);
-      console.log(result);
       return result;
     } catch ({ response }) {
       return rejectWithValue(response.status);

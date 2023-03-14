@@ -18,7 +18,7 @@ const LoginPage = () => {
 
   useEffect(() => {
     if (status) {
-      Notiflix.Notify.failure(`No such user found`);
+      Notiflix.Notify.info(`No such user found`);
       Notiflix.Notify.warning(
         `Please follow the instructitons under the input fields`
       );
