@@ -82,7 +82,7 @@ const ContactForm = () => {
         id={phoneInputId}
         onChange={handleChange}
         required
-        helperText="Phone number can cantain - or / and can start with +"
+        helperText="Phone number can contain - or / and can start with +"
       />
 
       <Button
