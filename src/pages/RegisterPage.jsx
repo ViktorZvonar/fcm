@@ -18,6 +18,11 @@ const RegisterPage = () => {
 
   useEffect(() => {
     if (status) {
+      Notiflix.Notify.init({
+        width: '400px',
+        position: 'right-top',
+        timeout: 5000,
+      });
       Notiflix.Notify.info(message);
       Notiflix.Notify.warning(
         `Please follow the instructitons under the input fields`

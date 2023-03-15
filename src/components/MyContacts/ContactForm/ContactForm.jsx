@@ -28,6 +28,12 @@ const ContactForm = () => {
   const onAddContact = payload => {
     const normalizedName = payload.name.toLowerCase();
 
+    Notiflix.Notify.init({
+      width: '400px',
+      position: 'right-top',
+      timeout: 5000,
+    });
+
     contacts.find(
       contact =>
         contact.name.toLowerCase() === normalizedName ||

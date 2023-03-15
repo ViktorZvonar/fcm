@@ -1,12 +1,20 @@
 import { Box } from '@mui/system';
 
+import { Report } from 'notiflix/build/notiflix-report-aio';
+
 import ContactPhoneOutlinedIcon from '@mui/icons-material/ContactPhoneOutlined';
 
 const HomePage = () => {
+  Report.warning(
+    'Cherish your friends :)',
+    '"True friends are like diamonds." <br/><br/>- Nicole Richie',
+    'I will'
+  );
+
   return (
     <Box display="flex" flexDirection="column" alignItems="center">
       <Box as="h1" textTransform="uppercase" color="orange" paddingTop="60px">
-        Welcome to your personal contacts manager
+        Welcome to your personal manager of friends' contacts
       </Box>
 
       <ContactPhoneOutlinedIcon
