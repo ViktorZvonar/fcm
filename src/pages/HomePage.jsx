@@ -1,19 +1,34 @@
 import { Box } from '@mui/system';
-
-// import { Report } from 'notiflix/build/notiflix-report-aio';
-
 import ContactPhoneOutlinedIcon from '@mui/icons-material/ContactPhoneOutlined';
 
 const HomePage = () => {
-  // Report.warning(
-  //   'Cherish your friends :)',
-  //   '"True friends are like diamonds." <br/><br/>- Nicole Richie',
-  //   'I will'
-  // );
-
   return (
-    <Box display="flex" flexDirection="column" alignItems="center">
-      <Box as="h1" textTransform="uppercase" color="orange" paddingTop="60px">
+    <Box
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      sx={{
+        paddingTop: {
+          xs: '20px',
+          md: '60px',
+          lg: '100px',
+        },
+      }}
+    >
+      <Box
+        as="h1"
+        textTransform="uppercase"
+        color="orange"
+        sx={{
+          width: '100%',
+          textAlign: 'center',
+          fontSize: {
+            xs: '20px',
+            md: '32px',
+            lg: '48px',
+          },
+        }}
+      >
         Welcome to your personal contacts manager
       </Box>
 
@@ -21,12 +36,26 @@ const HomePage = () => {
         sx={{
           marginRight: 'auto',
           marginLeft: 'auto',
-
-          fontSize: '200px',
+          fontSize: {
+            xs: '100px',
+            md: '150px',
+            lg: '200px',
+          },
           color: '#1976d2',
         }}
       />
-      <Box as="h3">Please register or log in</Box>
+      <Box
+        as="h3"
+        sx={{
+          fontSize: {
+            xs: '16px',
+            md: '24px',
+            lg: '32px',
+          },
+        }}
+      >
+        Please register or log in
+      </Box>
     </Box>
   );
 };
