@@ -1,5 +1,4 @@
 import { Box } from '@mui/system';
-import ContactPhoneOutlinedIcon from '@mui/icons-material/ContactPhoneOutlined';
 
 const HomePage = () => {
   return (
@@ -20,38 +19,36 @@ const HomePage = () => {
         textTransform="uppercase"
         color="orange"
         sx={{
-          width: '100%',
+          width: '60%',
+          padding: '10px',
           textAlign: 'center',
           fontSize: {
             xs: '20px',
             md: '32px',
             lg: '48px',
           },
+          borderRadius: '5px',
+          boxShadow: '0px 0px 20px 5px orange',
+          backgroundColor: 'white',
         }}
       >
-        Welcome to your personal contacts manager
+        Welcome to your contacts manager
       </Box>
 
-      <ContactPhoneOutlinedIcon
-        sx={{
-          marginRight: 'auto',
-          marginLeft: 'auto',
-          fontSize: {
-            xs: '100px',
-            md: '150px',
-            lg: '200px',
-          },
-          color: '#1976d2',
-        }}
-      />
       <Box
         as="h3"
         sx={{
+          width: '30%',
+          padding: '10px',
+          textAlign: 'center',
           fontSize: {
             xs: '16px',
             md: '24px',
             lg: '32px',
           },
+          borderRadius: '5px',
+          boxShadow: '0px 0px 20px 5px orange',
+          backgroundColor: 'white',
         }}
       >
         Please register or log in

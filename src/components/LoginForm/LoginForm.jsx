@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { Button, TextField, InputAdornment, IconButton } from '@mui/material';
+import { Button, InputAdornment, IconButton } from '@mui/material';
 import { VisibilityOff, Visibility } from '@mui/icons-material';
 
+import { StyledTextField } from '../RegisterForm/RegisterForm.styled';
 import { Form } from 'shared/Form.styled';
 
 import PropTypes from 'prop-types';
@@ -50,8 +51,7 @@ const LoginForm = ({ onSubmit }) => {
       }}
       onSubmit={handleSubmit}
     >
-      <TextField
-        sx={{ marginBottom: '40px' }}
+      <StyledTextField
         name="email"
         type="email"
         label="Email"
@@ -62,8 +62,7 @@ const LoginForm = ({ onSubmit }) => {
         autoComplete="current"
       />
 
-      <TextField
-        sx={{ marginBottom: '40px' }}
+      <StyledTextField
         name="password"
         type={type}
         label="Password"
@@ -79,7 +78,7 @@ const LoginForm = ({ onSubmit }) => {
                 onMouseDown={handleMouseDownPassword}
                 onMouseUp={handleMouseUpPassword}
               >
-                {eye ? <VisibilityOff /> : <Visibility />}
+                {eye ? <Visibility /> : <VisibilityOff />}
               </IconButton>
             </InputAdornment>
           ),

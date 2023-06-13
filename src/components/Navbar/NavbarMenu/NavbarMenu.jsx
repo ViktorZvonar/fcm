@@ -66,7 +66,7 @@ const NavBarMenu = () => {
         <Box display="flex" flexdirection="row" gap="100px">
           <Link to="/">Home</Link>
           <Link to="/register">Register</Link>
-          <Link to="/login">Log in</Link>
+          <Link to="/login">Login</Link>
         </Box>
       )}
     </Box>

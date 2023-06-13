@@ -1,4 +1,4 @@
-import { TextField } from '@mui/material';
+import { StyledTextField } from 'components/RegisterForm/RegisterForm.styled';
 
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -13,11 +13,7 @@ const Filter = () => {
   };
 
   return (
-    <TextField
-      sx={{
-        marginBottom: '40px',
-        width: '500px',
-      }}
+    <StyledTextField
       name="filter"
       type="text"
       label="Find a specified contact"

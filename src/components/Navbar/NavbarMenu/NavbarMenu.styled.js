@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
 export const Link = styled(NavLink)`
-  box-sizing: border-box;
   font-size: 14px;
   padding: 5px 20px 5px 20px;
   border-radius: 5px;

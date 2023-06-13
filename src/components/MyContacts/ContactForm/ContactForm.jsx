@@ -2,7 +2,9 @@ import Notiflix from 'notiflix';
 
 import { useState, useEffect } from 'react';
 
-import { Button, TextField } from '@mui/material';
+import { Button } from '@mui/material';
+
+import { StyledTextField } from 'components/RegisterForm/RegisterForm.styled';
 
 import {
   fetchAllContacts,
@@ -67,8 +69,7 @@ const ContactForm = () => {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <TextField
-        sx={{ marginBottom: '40px' }}
+      <StyledTextField
         name="name"
         type="text"
         label="Name"
@@ -80,7 +81,7 @@ const ContactForm = () => {
         autoComplete="current"
       />
 
-      <TextField
+      <StyledTextField
         sx={{ marginBottom: '40px' }}
         name="number"
         type="tel"
@@ -101,7 +102,7 @@ const ContactForm = () => {
         sx={{
           marginRight: 'auto',
 
-          width: '200px',
+          width: '100px',
         }}
       >
         Add contact
