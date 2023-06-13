@@ -1,10 +1,12 @@
 import MyContacts from '../components/MyContacts/MyContacts';
 
+import { Box } from '@mui/system';
+
 const MyContactsPage = () => {
   return (
-    <div className="container">
+    <Box>
       <MyContacts />
-    </div>
+    </Box>
   );
 };
 

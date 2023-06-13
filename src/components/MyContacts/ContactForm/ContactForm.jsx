@@ -68,7 +68,12 @@ const ContactForm = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form
+      style={{
+        width: '100%',
+      }}
+      onSubmit={handleSubmit}
+    >
       <StyledTextField
         name="name"
         type="text"
@@ -101,8 +106,7 @@ const ContactForm = () => {
         color="secondary"
         sx={{
           marginRight: 'auto',
-
-          width: '100px',
+          width: '100%',
         }}
       >
         Add contact

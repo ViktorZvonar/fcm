@@ -16,9 +16,20 @@ const ContactList = () => {
   };
 
   return (
-    <List sx={{}}>
+    <List>
       {contacts.map(contact => (
-        <ListItem key={contact.id} name={contact.name} number={contact.number}>
+        <ListItem
+          sx={{
+            backgroundColor: 'white',
+            padding: '0 15px',
+            boxShadow: '0px 0px 20px 0px #1976d2',
+            borderRadius: '5px',
+            marginBottom: '7px',
+          }}
+          key={contact.id}
+          name={contact.name}
+          number={contact.number}
+        >
           <ListItemText
             sx={{
               color: '#1976d2',

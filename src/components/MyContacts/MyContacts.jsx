@@ -8,43 +8,84 @@ import { Typography } from '@mui/material';
 const MyContacts = () => {
   return (
     <Stack
-      direction="row"
+      direction={{ sm: 'column', md: 'row' }}
+      alignItems={{ xs: 'center', md: 'initial' }}
       sx={{
         display: 'flex',
         justifyContent: 'space-evenly',
-        fontSize: 20,
+
+        fontSize: {
+          xs: '15px',
+          sm: '18px',
+          md: '20px',
+          lg: '20px',
+        },
         color: '#010101',
       }}
     >
-      <Box>
+      <Box
+        sx={{
+          width: {
+            xs: '90%',
+            sm: '90%',
+            md: '30%',
+            lg: '30%',
+          },
+        }}
+      >
         <Typography
           sx={{
-            textAlign: 'start',
-            marginTop: '30px',
+            padding: '5px',
+            textAlign: 'center',
             marginBottom: '30px',
-            fontSize: '28px',
-            fontWeight: '700',
-            color: 'orange',
+            fontSize: {
+              xs: '15px',
+              sm: '18px',
+              md: '20px',
+              lg: '24px',
+            },
+            textTransform: 'uppercase',
+            color: '#1976d2',
+            borderRadius: '5px',
+            boxShadow: '0px 0px 20px 5px orange',
+            backgroundColor: 'white',
           }}
           component="h1"
         >
-          Add a new contact here
+          Add a new contact
         </Typography>
         <ContactForm />
       </Box>
-      <Box>
+      <Box
+        sx={{
+          width: {
+            xs: '90%',
+            sm: '90%',
+            md: '30%',
+            lg: '30%',
+          },
+        }}
+      >
         <Typography
           sx={{
-            textAlign: 'start',
-            marginTop: '30px',
+            padding: '5px 10px',
+            textAlign: 'center',
             marginBottom: '30px',
-            fontSize: '28px',
-            fontWeight: '700',
-            color: 'orange',
+            fontSize: {
+              xs: '15px',
+              sm: '18px',
+              md: '20px',
+              lg: '24px',
+            },
+            textTransform: 'uppercase',
+            color: '#1976d2',
+            borderRadius: '5px',
+            boxShadow: '0px 0px 20px 5px orange',
+            backgroundColor: 'white',
           }}
           component="h1"
         >
-          Manage your contacts here
+          Manage your contacts
         </Typography>
         <Filter />
         <ContactList />

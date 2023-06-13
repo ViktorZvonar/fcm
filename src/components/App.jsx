@@ -15,7 +15,12 @@ const App = () => {
   }, [dispatch]);
 
   return (
-    <Box>
+    <Box
+      sx={{
+        width: '100%',
+        margin: '0 auto',
+      }}
+    >
       <Navbar />
       <UserRoutes />
     </Box>
