@@ -32,26 +32,28 @@ const HomePage = () => {
           backgroundColor: 'white',
         }}
       >
-        Welcome to your contacts manager
+        Your friends' contacts manager
       </Box>
 
       <Box
         as="h3"
         sx={{
-          width: '30%',
+          width: '20%',
           padding: '10px',
           textAlign: 'center',
           fontSize: {
-            xs: '16px',
-            md: '24px',
-            lg: '32px',
+            xs: '10px',
+            sm: '12px',
+            md: '18px',
+            lg: '24px',
           },
           borderRadius: '5px',
+          color: '#1976d2',
           boxShadow: '0px 0px 20px 5px orange',
           backgroundColor: 'white',
         }}
       >
-        Please register or log in
+        Register or login
       </Box>
     </Box>
   );
