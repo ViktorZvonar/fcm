@@ -46,8 +46,7 @@ const LoginForm = ({ onSubmit }) => {
   return (
     <Form
       style={{
-        marginLeft: 'auto',
-        marginRight: 'auto',
+        width: '100%',
       }}
       onSubmit={handleSubmit}
     >

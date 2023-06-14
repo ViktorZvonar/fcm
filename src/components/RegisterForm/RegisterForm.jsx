@@ -47,13 +47,7 @@ const RegisterForm = ({ onSubmit }) => {
   };
 
   return (
-    <Form
-      style={{
-        marginLeft: 'auto',
-        marginRight: 'auto',
-      }}
-      onSubmit={handleSubmit}
-    >
+    <Form style={{ width: '100%' }} onSubmit={handleSubmit}>
       <StyledTextField
         name="name"
         type="text"

@@ -36,6 +36,7 @@ const HomePage = () => {
           borderRadius: '5px',
           boxShadow: '0px 0px 20px 5px orange',
           backgroundColor: 'white',
+          marginBottom: '40px',
         }}
       >
         Your friends' contacts manager
