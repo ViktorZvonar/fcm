@@ -13,7 +13,6 @@ const MyContacts = () => {
       sx={{
         display: 'flex',
         justifyContent: 'space-evenly',
-
         fontSize: {
           xs: '15px',
           sm: '18px',

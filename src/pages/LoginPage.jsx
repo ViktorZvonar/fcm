@@ -36,7 +36,7 @@ const LoginPage = () => {
   };
 
   return (
-    <Box paddingTop="60px">
+    <Box>
       <Typography
         sx={{
           width: {

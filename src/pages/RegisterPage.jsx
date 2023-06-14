@@ -36,7 +36,7 @@ const RegisterPage = () => {
   };
 
   return (
-    <Box paddingTop="60px">
+    <Box>
       <Typography
         sx={{
           width: {

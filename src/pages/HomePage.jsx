@@ -1,4 +1,5 @@
 import { Box } from '@mui/system';
+import image from '../assets/pexels.jpg';
 
 const HomePage = () => {
   return (
@@ -7,10 +8,9 @@ const HomePage = () => {
       flexDirection="column"
       alignItems="center"
       sx={{
-        paddingTop: {
+        padding: {
           xs: '20px',
-          md: '60px',
-          lg: '100px',
+          md: '50px',
         },
       }}
     >
@@ -19,13 +19,19 @@ const HomePage = () => {
         textTransform="uppercase"
         color="orange"
         sx={{
-          width: '60%',
+          width: {
+            xs: '90%',
+            sm: '90%',
+            md: '60%',
+            lg: '60%',
+          },
           padding: '10px',
           textAlign: 'center',
           fontSize: {
-            xs: '20px',
-            md: '32px',
-            lg: '48px',
+            xs: '14px',
+            sm: '18px',
+            md: '20px',
+            lg: '25px',
           },
           borderRadius: '5px',
           boxShadow: '0px 0px 20px 5px orange',
@@ -36,25 +42,20 @@ const HomePage = () => {
       </Box>
 
       <Box
-        as="h3"
+        component="img"
+        src={image}
+        alt="friends"
         sx={{
-          width: '20%',
-          padding: '10px',
-          textAlign: 'center',
-          fontSize: {
-            xs: '10px',
-            sm: '12px',
-            md: '18px',
-            lg: '24px',
+          width: {
+            xs: '90%',
+            sm: '90%',
+            md: '60%',
+            lg: '60%',
           },
           borderRadius: '5px',
-          color: '#1976d2',
-          boxShadow: '0px 0px 20px 5px orange',
-          backgroundColor: 'white',
+          boxShadow: '5px 5px 15px 5px #000',
         }}
-      >
-        Register or login
-      </Box>
+      />
     </Box>
   );
 };
