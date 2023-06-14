@@ -1,5 +1,5 @@
 import { Box } from '@mui/system';
-import image from '../assets/pexels.jpg';
+import image from '../assets/photo-0.jpg';
 
 const HomePage = () => {
   return (

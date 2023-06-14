@@ -38,19 +38,24 @@ const RegisterPage = () => {
 
   return (
     <Stack
-      padding="30px 0"
       display="flex"
       flexDirection={{ xs: 'column', sm: 'column', md: 'row' }}
       alignItems="center"
       justifyContent="space-evenly"
+      sx={{
+        padding: {
+          xs: '20px',
+          md: '50px',
+        },
+      }}
     >
       <Box
         sx={{
           width: {
             xs: '90%',
-            sm: '90%',
-            md: '40%',
-            lg: '40%',
+            sm: '60%',
+            md: '30%',
+            lg: '30%',
           },
         }}
       >

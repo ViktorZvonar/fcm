@@ -38,11 +38,16 @@ const LoginPage = () => {
 
   return (
     <Stack
-      padding="30px 0"
       display="flex"
       flexDirection={{ xs: 'column', sm: 'column', md: 'row' }}
       alignItems="center"
       justifyContent="space-evenly"
+      sx={{
+        padding: {
+          xs: '20px',
+          md: '50px',
+        },
+      }}
     >
       <Box
         component="img"
@@ -67,8 +72,8 @@ const LoginPage = () => {
           width: {
             xs: '90%',
             sm: '90%',
-            md: '40%',
-            lg: '40%',
+            md: '30%',
+            lg: '30%',
           },
         }}
       >
@@ -79,8 +84,8 @@ const LoginPage = () => {
             marginBottom: '40px',
             fontSize: {
               xs: '15px',
-              md: '20px',
-              lg: '28px',
+              md: '18px',
+              lg: '20px',
             },
             textTransform: 'uppercase',
             color: '#1976d2',
@@ -90,7 +95,7 @@ const LoginPage = () => {
           }}
           component="h1"
         >
-          Be a friend...
+          Be there... Be a friend...
         </Typography>
         <LoginForm onSubmit={onLogin} />
       </Box>

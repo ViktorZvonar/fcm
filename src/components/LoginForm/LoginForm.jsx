@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button, InputAdornment, IconButton } from '@mui/material';
 import { VisibilityOff, Visibility } from '@mui/icons-material';
 
-import { StyledTextField } from '../RegisterForm/RegisterForm.styled';
+import { StyledTextField } from '../../shared/TextField.styled';
 import { Form } from 'shared/Form.styled';
 
 import PropTypes from 'prop-types';
@@ -53,7 +53,7 @@ const LoginForm = ({ onSubmit }) => {
       <StyledTextField
         name="email"
         type="email"
-        label="Email"
+        label="Your email"
         value={state.email}
         onChange={handleChange}
         required

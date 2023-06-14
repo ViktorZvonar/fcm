@@ -1,4 +1,4 @@
-import { StyledTextField } from 'components/RegisterForm/RegisterForm.styled';
+import { StyledTextField } from 'shared/TextField.styled';
 
 import { useSelector, useDispatch } from 'react-redux';
 

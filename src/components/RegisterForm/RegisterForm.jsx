@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { Button, InputAdornment, IconButton } from '@mui/material';
 import { VisibilityOff, Visibility } from '@mui/icons-material';
 
-import { StyledTextField } from './RegisterForm.styled';
+import { StyledTextField } from '../../shared/TextField.styled';
 
 import { Form } from '../../shared/Form.styled';
 
@@ -51,7 +51,7 @@ const RegisterForm = ({ onSubmit }) => {
       <StyledTextField
         name="name"
         type="text"
-        label="Name"
+        label="Your name"
         value={state.name}
         onChange={handleChange}
         required
@@ -62,7 +62,7 @@ const RegisterForm = ({ onSubmit }) => {
       <StyledTextField
         name="email"
         type="email"
-        label="Email"
+        label="Your email"
         value={state.email}
         onChange={handleChange}
         required

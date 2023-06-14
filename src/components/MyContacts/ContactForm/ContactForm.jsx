@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 
 import { Button } from '@mui/material';
 
-import { StyledTextField } from 'components/RegisterForm/RegisterForm.styled';
+import { StyledTextField } from 'shared/TextField.styled';
 
 import {
   fetchAllContacts,
@@ -77,7 +77,7 @@ const ContactForm = () => {
       <StyledTextField
         name="name"
         type="text"
-        label="Name"
+        label="A friend's name"
         value={state.name}
         id={nameInputId}
         onChange={handleChange}
@@ -90,7 +90,7 @@ const ContactForm = () => {
         sx={{ marginBottom: '40px' }}
         name="number"
         type="tel"
-        label="Number"
+        label="A friend's number"
         value={state.number}
         id={phoneInputId}
         onChange={handleChange}
