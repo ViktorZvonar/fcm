@@ -52,19 +52,30 @@ const LoginPage = () => {
       <Box
         component="img"
         src={image}
-        alt="register-friends"
+        alt="login-friends"
         sx={{
           width: {
             xs: '90%',
             sm: '90%',
-            md: '43%',
-            lg: '43%',
+            md: '40%',
+            lg: '40%',
           },
 
           height: '100%',
           objectFit: 'contain',
-          borderRadius: '5px',
+          borderRadius: {
+            xs: '50px',
+            sm: '50px',
+            md: '5px',
+            lg: '5px',
+          },
           boxShadow: '5px 5px 15px 5px #000',
+          marginBottom: {
+            xs: '20px',
+            sm: '20px',
+            md: '0px',
+            lg: '0px',
+          },
         }}
       />
       <Box
@@ -83,9 +94,10 @@ const LoginPage = () => {
             textAlign: 'center',
             marginBottom: '40px',
             fontSize: {
-              xs: '15px',
+              xs: '12px',
+              sm: '15px',
               md: '18px',
-              lg: '20px',
+              lg: '18px',
             },
             textTransform: 'uppercase',
             color: '#1976d2',
