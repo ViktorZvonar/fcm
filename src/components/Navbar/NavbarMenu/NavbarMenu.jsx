@@ -34,8 +34,8 @@ const NavBarMenu = () => {
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
-      width="40vh"
-      height="100vh"
+      width="30vh"
+      height="90vh"
     >
       <List>
         {['Home', 'Register', 'Login'].map((text, index) => (
@@ -47,17 +47,30 @@ const NavBarMenu = () => {
         ))}
       </List>
       <Box
+        sx={{
+          backgroundImage: `url(${image})`,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          borderRadius: '50px',
+          boxShadow: '5px 5px 15px 5px #000',
+          width: '80%',
+          height: '100%',
+          margin: '10px auto',
+        }}
+      ></Box>
+      {/* <Box
         component="img"
         src={image}
         alt="just_friends"
         sx={{
-          width: '60%',
+          width: '80%',
           objectFit: 'contain',
           borderRadius: '5px',
           boxShadow: '5px 5px 15px 5px #000',
-          margin: '20px ',
+          margin: '50px 20px 20px 20px',
         }}
-      />
+      /> */}
     </Box>
   );
 
