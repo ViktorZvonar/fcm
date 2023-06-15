@@ -34,7 +34,7 @@ const NavBarMenu = () => {
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
-      width="50vh"
+      width="40vh"
       height="100vh"
     >
       <List>
@@ -55,7 +55,7 @@ const NavBarMenu = () => {
           objectFit: 'contain',
           borderRadius: '5px',
           boxShadow: '5px 5px 15px 5px #000',
-          margin: '20px 10px 10px',
+          margin: '20px ',
         }}
       />
     </Box>
