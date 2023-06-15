@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from './NavbarMenu.styled';
+import image from '../../../assets/napis-friends-1.jpeg';
 import {
   Box,
   useMediaQuery,
@@ -33,6 +34,8 @@ const NavBarMenu = () => {
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
+      width="50vh"
+      height="100vh"
     >
       <List>
         {['Home', 'Register', 'Login'].map((text, index) => (
@@ -43,6 +46,18 @@ const NavBarMenu = () => {
           </ListItem>
         ))}
       </List>
+      <Box
+        component="img"
+        src={image}
+        alt="just_friends"
+        sx={{
+          width: '60%',
+          objectFit: 'contain',
+          borderRadius: '5px',
+          boxShadow: '5px 5px 15px 5px #000',
+          margin: '20px 10px 10px',
+        }}
+      />
     </Box>
   );
 
