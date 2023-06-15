@@ -55,7 +55,7 @@ const NavBarMenu = () => {
             aria-label="menu"
             onClick={toggleDrawer(true)}
           >
-            <MenuIcon />
+            <MenuIcon style={{ color: 'white' }} />
           </IconButton>
 
           <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>

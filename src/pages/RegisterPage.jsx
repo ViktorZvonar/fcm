@@ -105,7 +105,7 @@ const RegisterPage = () => {
           marginTop: {
             xs: '20px',
             sm: '20px',
-            md: '0px',
+            md: '20px',
             lg: '0px',
           },
         }}
