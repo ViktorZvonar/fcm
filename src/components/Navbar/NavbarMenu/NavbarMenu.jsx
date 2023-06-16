@@ -49,13 +49,13 @@ const NavBarMenu = () => {
       <Box
         sx={{
           backgroundImage: `url(${image})`,
-          backgroundSize: 'cover',
+          backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
-          borderRadius: '50px',
+          borderRadius: '5px',
           boxShadow: '5px 5px 15px 5px #000',
-          width: '80%',
-          height: '100%',
+          width: '57%',
+          height: '74%',
           margin: '10px auto',
         }}
       ></Box>
