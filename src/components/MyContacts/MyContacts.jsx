@@ -10,6 +10,7 @@ const MyContacts = () => {
     <Stack
       direction={{ sm: 'column', md: 'row' }}
       alignItems={{ xs: 'center', md: 'initial' }}
+      padding="20px 0"
       sx={{
         display: 'flex',
         justifyContent: 'space-evenly',
@@ -30,13 +31,14 @@ const MyContacts = () => {
             md: '30%',
             lg: '30%',
           },
+          marginBottom: { xs: '40px' },
         }}
       >
         <Typography
           sx={{
             padding: '5px',
             textAlign: 'center',
-            marginBottom: '30px',
+            marginBottom: '20px',
             fontSize: {
               xs: '15px',
               sm: '18px',
@@ -69,7 +71,7 @@ const MyContacts = () => {
           sx={{
             padding: '5px 10px',
             textAlign: 'center',
-            marginBottom: '30px',
+            marginBottom: '20px',
             fontSize: {
               xs: '15px',
               sm: '18px',

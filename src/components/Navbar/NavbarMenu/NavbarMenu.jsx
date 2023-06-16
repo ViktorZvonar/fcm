@@ -59,18 +59,6 @@ const NavBarMenu = () => {
           margin: '10px auto',
         }}
       ></Box>
-      {/* <Box
-        component="img"
-        src={image}
-        alt="just_friends"
-        sx={{
-          width: '80%',
-          objectFit: 'contain',
-          borderRadius: '5px',
-          boxShadow: '5px 5px 15px 5px #000',
-          margin: '50px 20px 20px 20px',
-        }}
-      /> */}
     </Box>
   );
 
@@ -91,10 +79,16 @@ const NavBarMenu = () => {
           </Drawer>
         </>
       ) : (
-        <Box display="flex" flexdirection="row" gap="100px">
-          <Link to="/">Home</Link>
-          <Link to="/register">Register</Link>
-          <Link to="/login">Login</Link>
+        <Box display="flex" justifyContent="space-around">
+          <Box>
+            <Link to="/">Home</Link>
+          </Box>
+          <Box display="flex">
+            <Link style={{ marginRight: '15px' }} to="/register">
+              Register
+            </Link>
+            <Link to="/login">Login</Link>
+          </Box>
         </Box>
       )}
     </Box>

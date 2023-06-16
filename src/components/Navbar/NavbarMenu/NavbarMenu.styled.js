@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
 export const Link = styled(NavLink)`
+  display: block;
   font-size: 14px;
   padding: 5px 20px 5px 20px;
   border-radius: 5px;
@@ -16,10 +17,5 @@ export const Link = styled(NavLink)`
     border-radius: 5px;
     background-color: #fff;
     color: #1976d2;
-  }
-
-  @media (min-width: 600px) {
-    font-size: 18px;
-    padding: 5px 30px 5px 30px;
   }
 `;

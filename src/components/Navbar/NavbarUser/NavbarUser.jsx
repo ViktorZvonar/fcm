@@ -4,28 +4,45 @@ import { logOutOperation } from 'redux/auth/authOperations';
 
 import { selectUser } from 'redux/selectors';
 
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, Typography, IconButton } from '@mui/material';
+
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 const NavbarUser = () => {
-  const { email } = useSelector(selectUser);
+  const { name } = useSelector(selectUser);
   const dispatch = useDispatch();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const onLogout = () => {
     dispatch(logOutOperation());
   };
 
   return (
-    <Box display="flex" justifyContent="center" gap="60px">
-      <Typography color="white">{email}</Typography>
-      <Button
-        onClick={onLogout}
-        type="button"
-        variant="contained"
-        size="small"
-        color="secondary"
-      >
-        Log out
-      </Button>
+    <Box
+      display="flex"
+      alignItems="center"
+      justifyContent="space-between"
+      width="100%"
+    >
+      <Typography sx={{ color: 'white' }}>{name}</Typography>
+      {isMobile ? (
+        <IconButton onClick={onLogout} color="secondary">
+          <LogoutIcon />
+        </IconButton>
+      ) : (
+        <Button
+          onClick={onLogout}
+          type="button"
+          variant="contained"
+          size="small"
+          color="secondary"
+        >
+          Log out
+        </Button>
+      )}
     </Box>
   );
 };
