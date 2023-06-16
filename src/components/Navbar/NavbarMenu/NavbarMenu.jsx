@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from './NavbarMenu.styled';
+import { Link } from '../../../shared/Link.styled';
 import image from '../../../assets/napis-friends-1.jpeg';
 import {
   Box,
