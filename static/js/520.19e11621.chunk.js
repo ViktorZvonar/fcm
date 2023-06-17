@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkfriends_contacts_manager=self.webpackChunkfriends_contacts_manager||[]).push([[520],{4520:function(n,e,r){r.r(e);var s=r(1087),a=r(184);e.default=function(){return(0,a.jsxs)("div",{children:[(0,a.jsx)("h2",{children:"Page not found"}),(0,a.jsx)(s.rU,{to:"/",children:"To Home page"})]})}}}]);
+//# sourceMappingURL=520.19e11621.chunk.js.map
