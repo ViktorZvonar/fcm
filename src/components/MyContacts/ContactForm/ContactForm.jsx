@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 
 import { Button } from '@mui/material';
 
-import { StyledTextField } from 'shared/TextField.styled';
+import { StyledTextField } from 'shared/styles/TextField.styled';
 
 import {
   fetchAllContacts,
@@ -13,7 +13,7 @@ import {
 
 import { nanoid } from 'nanoid';
 
-import { Form } from 'shared/Form.styled';
+import { Form } from 'shared/styles/Form.styled';
 
 import { useSelector, useDispatch } from 'react-redux';
 

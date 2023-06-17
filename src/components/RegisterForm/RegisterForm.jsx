@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 import { Button, InputAdornment, IconButton } from '@mui/material';
 import { VisibilityOff, Visibility } from '@mui/icons-material';
 
-import { StyledTextField } from '../../shared/TextField.styled';
+import { StyledTextField } from '../../shared/styles/TextField.styled';
 
-import { Form } from '../../shared/Form.styled';
+import { Form } from '../../shared/styles/Form.styled';
 
 const RegisterForm = ({ onSubmit }) => {
   const initialState = {

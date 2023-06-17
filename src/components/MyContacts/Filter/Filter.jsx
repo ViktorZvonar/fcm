@@ -1,4 +1,4 @@
-import { StyledTextField } from 'shared/TextField.styled';
+import { StyledTextField } from 'shared/styles/TextField.styled';
 
 import { useSelector, useDispatch } from 'react-redux';
 
