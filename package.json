@@ -1,8 +1,8 @@
 {
-  "name": "react-homework-template",
+  "name": "friends-contacts-manager",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ViktorZvonar.github.io/goit-react-hw-08-phonebook/",
+  "homepage": "https://ViktorZvonar.github.io/fcm/",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
