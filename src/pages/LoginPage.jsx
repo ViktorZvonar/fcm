@@ -57,8 +57,8 @@ const LoginPage = () => {
           width: {
             xs: '90%',
             sm: '90%',
-            md: '40%',
-            lg: '40%',
+            md: '50%',
+            lg: '50%',
           },
 
           height: '100%',
