@@ -76,8 +76,8 @@ const HomePage = () => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          width: {
-            xs: '50%',
+          minWidth: {
+            xs: '60%',
             sm: '50%',
             md: '30%',
             lg: '30%',
