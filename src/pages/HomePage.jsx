@@ -1,7 +1,14 @@
-import { Box } from '@mui/system';
-import image from '../assets/photo-0.jpg';
+import { Box, Typography } from '@mui/material';
+import desktopImage from '../assets/photo-0-1.jpg';
+import mobileImage from '../assets/photo-0.jpg';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { LinkInscription } from '../shared/styles/Link.styled';
 
 const HomePage = () => {
+  const isMobile = useMediaQuery('(max-width: 600px)');
+
+  const backgroundImage = isMobile ? mobileImage : desktopImage;
+
   return (
     <Box
       display="flex"
@@ -37,6 +44,10 @@ const HomePage = () => {
           boxShadow: '0px 0px 20px 5px orange',
           backgroundColor: 'white',
           marginBottom: '40px',
+          '&:hover': {
+            backgroundColor: '#ffcc80',
+            color: 'white',
+          },
         }}
       >
         Your friends' contacts manager
@@ -44,7 +55,7 @@ const HomePage = () => {
 
       <Box
         component="img"
-        src={image}
+        src={backgroundImage}
         alt="friends"
         sx={{
           width: {
@@ -57,18 +68,21 @@ const HomePage = () => {
           boxShadow: '5px 5px 15px 5px #000',
         }}
       />
+
       <Box
         as="h1"
-        textTransform="uppercase"
         color="#1976d2"
         sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
           width: {
-            xs: '90%',
-            sm: '90%',
-            md: '60%',
-            lg: '60%',
+            xs: '50%',
+            sm: '50%',
+            md: '30%',
+            lg: '30%',
           },
-          padding: '10px',
+          padding: '5px 10px',
           textAlign: 'center',
           fontSize: {
             xs: '12px',
@@ -82,7 +96,26 @@ const HomePage = () => {
           marginTop: '60px',
         }}
       >
-        please register or login
+        <Typography
+          component={LinkInscription}
+          to="/register"
+          color="inherit"
+          variant="inherit"
+          marginRight="10px"
+        >
+          REGISTER
+        </Typography>
+        {'  '}
+        or{'  '}
+        <Typography
+          component={LinkInscription}
+          to="/login"
+          color="inherit"
+          variant="inherit"
+          marginLeft="10px"
+        >
+          LOGIN
+        </Typography>
       </Box>
     </Box>
   );
